@@ -1,0 +1,31 @@
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .bounce-animation {
+            animation: bounce 0.5s ease infinite;
+        }
+        .choice-selected {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+        }
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(59, 130, 246, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+        }
+
+
+#privacy a {
+  color: #4da6ff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+#privacy a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}

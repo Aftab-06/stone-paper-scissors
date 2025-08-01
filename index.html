@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="your-verification-code-here" />
+    <meta name="google-site-verification" content="your-google-code-here" />
+
+    <title>Modern Stone Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-gray-800 min-h-screen text-white font-sans">
+    <div class="container mx-auto px-4 py-8 flex flex-col items-center">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 mb-4">
+                Stone Paper Scissors
+            </h1>
+            <p class="text-lg text-gray-300">A modern twist on the classic game</p>
+        </header>
+
+        <div class="w-full max-w-4xl">
+            <!-- Score Board -->
+            <div class="flex justify-between items-center mb-12 p-6 bg-gray-800 rounded-xl shadow-lg">
+                <div class="text-center">
+                    <h3 class="text-xl font-semibold text-blue-400">YOU</h3>
+                    <p id="player-score" class="text-4xl font-bold">0</p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-xl font-semibold text-purple-400">VS</h3>
+                    <p class="text-sm text-gray-400">Best of 5</p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-xl font-semibold text-red-400">COMPUTER</h3>
+                    <p id="computer-score" class="text-4xl font-bold">0</p>
+                </div>
+            </div>
+
+            <!-- Game Area -->
+            <div class="relative mb-16">
+                <!-- Computer Choice -->
+                <div class="flex justify-center mb-16">
+                    <div id="computer-choice" class="w-32 h-32 md:w-40 md:h-40 bg-gray-800 rounded-full flex items-center justify-center shadow-xl border-4 border-gray-700">
+                        <span class="text-gray-500 text-4xl">?</span>
+                    </div>
+                </div>
+
+                <!-- Result Display -->
+                <div id="result-display" class="text-center my-8 h-12">
+                    <p id="result-text" class="text-2xl font-bold"></p>
+                </div>
+
+                <!-- Player Choices -->
+                <div class="flex justify-center space-x-4 md:space-x-8 mt-16">
+                    <button data-choice="stone" class="choice-btn w-20 h-20 md:w-28 md:h-28 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-200">
+                        <span class="text-4xl">✊</span>
+                    </button>
+                    <button data-choice="paper" class="choice-btn w-20 h-20 md:w-28 md:h-28 bg-gradient-to-br from-green-500 to-green-700 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-200">
+                        <span class="text-4xl">✋</span>
+                    </button>
+                    <button data-choice="scissors" class="choice-btn w-20 h-20 md:w-28 md:h-28 bg-gradient-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-200">
+                        <span class="text-4xl">✌️</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Game Controls -->
+            <div class="flex justify-center space-x-4 mt-8">
+                <button id="play-again-btn" class="px-6 py-3 bg-blue-600 hover:bg-blue-500 rounded-lg font-medium transition-colors duration-200">
+                    Play Again
+                </button>
+                <button id="new-game-btn" class="px-6 py-3 bg-purple-600 hover:bg-purple-500 rounded-lg font-medium transition-colors duration-200">
+                    New Game
+                </button>
+            </div>
+        </div>
+
+        <!-- Game Rules -->
+        <div class="mt-16 p-6 bg-gray-800 rounded-xl max-w-2xl w-full">
+            <h2 class="text-2xl font-bold mb-4 text-center text-purple-400">How to Play</h2>
+            <ul class="space-y-2 text-gray-300">
+                <li class="flex items-start">
+                    <span class="text-blue-400 mr-2">•</span>
+                    <span>Stone (✊) beats Scissors (✌️)</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-400 mr-2">•</span>
+                    <span>Paper (✋) beats Stone (✊)</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-red-400 mr-2">•</span>
+                    <span>Scissors (✌️) beats Paper (✋)</span>
+                </li>
+                <li class="flex items-start mt-4">
+                    <span class="text-yellow-400 mr-2">•</span>
+                    <span>First to win 3 rounds wins the game!</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+<footer class="mt-16 w-full text-center py-6 text-gray-400 border-t border-gray-700">
+    <p>Made with ❤️ by <span class="text-blue-400 font-semibold">Aftab Hussain</span> | © 2025</p>
+    <div class="mt-2 flex justify-center space-x-4">
+        <a href="https://github.com/aftab-hussain" target="_blank" class="hover:text-white transition">GitHub</a>
+        <a href="https://linkedin.com/in/aftab-hussain" target="_blank" class="hover:text-white transition">LinkedIn</a>
+    </div>
+    <br>
+  <p id="privacy">
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="terms.html">Terms & Conditions</a> |
+    <a href="sitemap.html">Sitemap</a>
+  </p>
+</footer>
+
+
+</html>
